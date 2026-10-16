@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="description" content="Find your room, make a reservation, and manage your stay at Hotel Haven.">
+  <meta name="application-name" content="Hotel Haven">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hotel Haven — Stay a little slower">
+  <meta property="og:description" content="Thoughtful rooms, warm details, and a stay that feels like it was made for you.">
+  <meta name="twitter:card" content="summary">
+  <title>Hotel Haven — Stay a little slower</title>
+  <link rel="stylesheet" href="/styles.css?v=3">
+  <script src="/app.js?v=4" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Hotel Haven home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>haven<span class="brand-period">.</span><small>HOTEL & STAYS</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#rooms">Stay</a>
+      <a href="#manage">Your reservation</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button"
+            aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">☾</span>
+      <span class="theme-label">Dark mode</span>
+    </button>
+    <a class="header-cta" href="#rooms">Find a room <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A QUIETER KIND OF GETAWAY</p>
+        <h1 id="hero-title">Make room<br>for <em>somewhere</em><br>new.</h1>
+        <p class="hero-description">Thoughtful rooms, warm details, and a stay that feels like it was made for you.</p>
+        <a class="text-link" href="#rooms">Find your stay <span aria-hidden="true">↓</span></a>
+      </div>
+      <div id="room-slideshow" class="hero-art" role="region" aria-label="Featured hotel rooms">
+        <img id="slideshow-image" class="slideshow-image" src="/images/standard-room.jpg?v=1"
+             alt="Classic King hotel room" fetchpriority="high">
+        <div class="slideshow-shade" aria-hidden="true"></div>
+        <span class="slideshow-kicker">A ROOM FOR EVERY KIND OF GETAWAY</span>
+        <div class="art-caption">
+          <div class="slideshow-caption">
+            <span id="slideshow-count" class="slideshow-count">01 / 03</span>
+            <span id="slideshow-title" class="slideshow-title">CLASSIC KING</span>
+          </div>
+          <div class="slideshow-controls" aria-label="Slideshow controls">
+            <button id="slide-previous" class="slide-control" type="button" aria-label="Show previous room">←</button>
+            <button id="slideshow-toggle" class="slide-control slideshow-toggle" type="button"
+                    aria-label="Pause slideshow" aria-pressed="false">
+              <span aria-hidden="true">Ⅱ</span>
+            </button>
+            <div id="slideshow-dots" class="slideshow-dots" aria-label="Choose a room photo">
+              <button class="slide-dot" type="button" aria-label="Show Classic King" aria-pressed="true"></button>
+              <button class="slide-dot" type="button" aria-label="Show Deluxe Garden" aria-pressed="false"></button>
+              <button class="slide-dot" type="button" aria-label="Show The Corner Suite" aria-pressed="false"></button>
+            </div>
+            <button id="slide-next" class="slide-control" type="button" aria-label="Show next room">→</button>
+          </div>
+        </div>
+        <span id="slideshow-announcement" class="visually-hidden" aria-live="polite" aria-atomic="true"></span>
+      </div>
+      <div class="hero-side-note">GOOD DAYS<br>START HERE</div>
+    </section>
+
+    <section class="booking-search" aria-label="Search room availability">
+      <div class="search-intro">
+        <span class="search-star" aria-hidden="true">✳</span>
+        <span>Find a room<br><small>Make yourself at home</small></span>
+      </div>
+      <form id="search-form" class="search-form">
+        <label>CHECK IN<input id="check-in" name="checkIn" type="date" required></label>
+        <span class="date-divider" aria-hidden="true"></span>
+        <label>CHECK OUT<input id="check-out" name="checkOut" type="date" required></label>
+        <button class="button button-dark" type="submit">Search rooms <span aria-hidden="true">↗</span></button>
+      </form>
+    </section>
+
+    <section id="rooms" class="rooms-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT GOOD NIGHT</p>
+          <h2>Rooms with <em>room</em><br>to breathe.</h2>
+        </div>
+        <p class="section-note">Each stay has its own little something.<br>Find the one that feels like you.</p>
+      </div>
+      <div id="room-message" class="message" role="status" aria-live="polite"></div>
+      <div id="room-list" class="room-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="quote-band">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <blockquote>A lovely place to land<br>and a little more time to <em>be.</em></blockquote>
+      <p>THE HAVEN PROMISE <span>✳</span></p>
+    </section>
+
+    <section id="manage" class="manage-section">
+      <div class="manage-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> ALREADY BOOKED?</p>
+        <h2>Your plans,<br><em>all in one place.</em></h2>
+        <p>Look up a reservation with the email address used when booking. You can review the details or cancel a confirmed stay.</p>
+      </div>
+      <div class="manage-panel">
+        <form id="lookup-form" class="lookup-form">
+          <label for="lookup-email">EMAIL ADDRESS</label>
+          <div class="lookup-row">
+            <input id="lookup-email" name="email" type="email" placeholder="you@example.com" required>
+            <button class="button button-dark" type="submit">Look up <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+        <div id="booking-message" class="message" role="status" aria-live="polite"></div>
+        <div id="booking-list" class="booking-list" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="closing-note">
+      <span aria-hidden="true">H</span>
+      <p>A little more <em>you time.</em></p>
+      <a class="text-link" href="#rooms">Find your room <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">H</span><span>haven<span class="brand-period">.</span><small>HOTEL & STAYS</small></span></a>
+    <p>Make yourself at home, wherever you are.</p>
+    <span>© 2026 HOTEL HAVEN</span>
+  </footer>
+
+  <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="dialog-title">
+    <form id="booking-form" class="booking-form">
+      <button class="dialog-close" type="button" aria-label="Close reservation form">×</button>
+      <p class="eyebrow"><span class="eyebrow-line"></span> YOUR STAY, YOUR WAY</p>
+      <h2 id="dialog-title">Make it <em>yours.</em></h2>
+      <p id="selected-room" class="selected-room"></p>
+      <div class="form-row">
+        <label for="guest-name">YOUR NAME<input id="guest-name" name="guestName" type="text" maxlength="80" autocomplete="name" required></label>
+        <label for="guest-email">EMAIL ADDRESS<input id="guest-email" name="email" type="email" maxlength="254" autocomplete="email" required></label>
+      </div>
+      <label for="guest-count">NUMBER OF GUESTS<input id="guest-count" name="guestCount" type="number" min="1" value="1" required></label>
+      <p id="stay-summary" class="stay-summary"></p>
+      <input id="booking-room-id" name="roomId" type="hidden">
+      <input id="booking-check-in" name="checkIn" type="hidden">
+      <input id="booking-check-out" name="checkOut" type="hidden">
+      <p id="dialog-message" class="message" role="status" aria-live="polite"></p>
+      <button class="button button-dark button-wide" type="submit">Confirm reservation <span aria-hidden="true">↗</span></button>
+      <p class="form-footnote">This demo stores reservations locally on this computer. No payment is collected.</p>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
