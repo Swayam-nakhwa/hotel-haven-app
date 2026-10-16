@@ -133,9 +133,10 @@ Documentation/ Project report and presentation
 ## Project deliverables
 
 - [Project report](./Documentation/Hotel_Haven_Project_Report.docx) — editable report covering requirements, architecture, OOP design, workflows, testing, setup, and limitations.
+- [Project report (PDF)](./Documentation/Hotel_Haven_Project_Report.pdf) — ready-to-view and print version of the report.
 - [Project presentation](./Documentation/Hotel_Haven_Project_Presentation.pptx) — 12-slide presentation with project screenshots and a local run guide.
 
-Replace the bracketed student and institution details on the report cover and presentation title slide before submitting.
+The report cover and presentation title slide include the submitted student, course, faculty, and institution details. Review them for accuracy before submitting.
 
 ## Local JSON API
 
