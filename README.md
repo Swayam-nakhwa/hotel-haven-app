@@ -127,7 +127,15 @@ src/         C++ implementations and application entry point
 public/      Browser UI assets
 tests/       Dependency-free C++ reservation service tests
 data/        Created at runtime; CSV reservations are stored here
+Documentation/ Project report and presentation
 ```
+
+## Project deliverables
+
+- [Project report](./Documentation/Hotel_Haven_Project_Report.docx) — editable report covering requirements, architecture, OOP design, workflows, testing, setup, and limitations.
+- [Project presentation](./Documentation/Hotel_Haven_Project_Presentation.pptx) — 12-slide presentation with project screenshots and a local run guide.
+
+Replace the bracketed student and institution details on the report cover and presentation title slide before submitting.
 
 ## Local JSON API
 
